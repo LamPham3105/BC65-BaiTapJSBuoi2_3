@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bai TAP JS 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container pb-5">
+      <div class="pt-5 form-group">
+        <label for="exercises">Chọn bài tập</label>
+        <select class="form-control" name="exercises" id="exercises">
+          <option value="1">Bài tập 1</option>
+          <option value="2">Bài tập 2</option>
+          <option value="3">Bài tập 3</option>
+          <option value="4">Bài tập 4</option>
+          <option value="5">Bài tập 5</option>
+        </select>
+      </div>
+      <button class="btn btn-success" onclick="handleExercise()">
+        Lấy bài tập
+      </button>
+
+      <!-- BAI TAP 1 -->
+      <div id="exercise1" class="pt-5">
+        <h1>Bài Tập 1: Tính lương nhân viên</h1>
+        <div class="form-group">
+          <label for="day">Số ngày làm</label>
+          <input
+            type="number"
+            name="day"
+            id="day"
+            class="form-control"
+            placeholder="Nhập số ngày làm"
+          />
+        </div>
+        <p>Lương 1 ngày: 100.000</p>
+        <button class="btn btn-success" onclick="calculateSalary()">
+          Tính tiền
+        </button>
+        <div class="pt-3" id="salary"></div>
+      </div>
+
+      <!-- BAI TAP 2 -->
+      <div id="exercise2" class="pt-5">
+        <h1>Bài Tập 2: Tính giá trị trung bình</h1>
+        <div class="form-group">
+          <label for="numbers">Nhập vào 5 số</label>
+          <input
+            type="number"
+            name="number1"
+            id="number1"
+            class="form-control pt-3"
+            placeholder="Nhập số thứ nhất"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="number2"
+            id="number2"
+            class="form-control pt-3"
+            placeholder="Nhập số thứ hai"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="number3"
+            id="number3"
+            class="form-control pt-3"
+            placeholder="Nhập số thứ ba"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="number4"
+            id="number4"
+            class="form-control pt-3"
+            placeholder="Nhập số thứ tư"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="number"
+            name="number5"
+            id="number5"
+            class="form-control pt-3"
+            placeholder="Nhập số thứ năm"
+          />
+        </div>
+        <button class="btn btn-success" onclick="calculateAVG()">
+          Tính trung bình
+        </button>
+        <div class="pt-3" id="avg"></div>
+      </div>
+
+      <!-- BAI TAP 3 -->
+      <div id="exercise3" class="pt-5">
+        <h1>Bài Tập 3: Quy đổi tiền</h1>
+        <div class="form-group">
+          <label for="moneyUSD">Nhập vào số tiền USD</label>
+          <input
+            type="number"
+            name="money"
+            id="money"
+            class="form-control"
+            placeholder="Nhập vào số tiền"
+          />
+        </div>
+        <p>Giá USD hiện tại: 23.500 VND</p>
+        <button class="btn btn-success" onclick="calculateMoney()">
+          Quy đổi tiền
+        </button>
+        <div class="pt-3" id="moneyVND"></div>
+      </div>
+
+      <!-- BAI TAP 4 -->
+      <div id="exercise4" class="pt-5">
+        <h1>Bài Tập 4: Tính diện tích, chu vi hình chữ nhật</h1>
+        <div class="form-group">
+          <label for="length">Nhập vào chiều dài</label>
+          <input
+            type="number"
+            name="length"
+            id="length"
+            class="form-control"
+            placeholder="Nhập vào chiều dài"
+          />
+        </div>
+        <div class="form-group">
+          <label for="width">Nhập vào chiều rộng</label>
+          <input
+            type="number"
+            name="width"
+            id="width"
+            class="form-control"
+            placeholder="Nhập vào chiều rộng"
+          />
+        </div>
+        <button class="btn btn-success" onclick="calculateRectangle()">
+          Tính diện tích, chu vi hình chữ nhật
+        </button>
+        <div class="pt-3" id="acreage"></div>
+        <div class="pt-3" id="perimeter"></div>
+      </div>
+
+      <!-- BAI TAP 5 -->
+      <div id="exercise5" class="pt-5">
+        <h1>Bài Tập 5: Tính tổng 2 ký số</h1>
+        <div class="form-group">
+          <label for="digital">Nhập ký số có 2 ký số</label>
+          <input
+            type="number"
+            name="digital"
+            id="digital"
+            class="form-control"
+            placeholder="Nhập vào ký số có 2 ký số"
+          />
+        </div>
+        <button class="btn btn-success" onclick="calculateSum()">
+          Tính tổng 2 ký số
+        </button>
+        <div class="pt-3" id="digitalTwo"></div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
